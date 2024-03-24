@@ -1,0 +1,466 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow:hidden;
+    margin: 0;
+}
+
+.block1 {
+    background:#ff6a00;
+    color:white;
+    text-align: center;
+}
+
+.block1 h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 80px;
+    margin-top: -80px;
+}
+
+.block1 p {
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 10px 0 10px;
+}
+
+.block1 svg {
+    display: block;
+}
+
+.block1.upper {
+    background:rgb(255, 255, 255);
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.service-wrapper {
+    padding: 5% 8%;;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service h1 {
+    color:#ff6a00;
+    font-size: 100px;
+    letter-spacing: 4px;
+    background:linear-gradient(8deg, #ff3c00 0%, rgb(0,89,255));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:130px;
+    margin-top: 80px;
+}
+
+.card{
+    height: 330px;
+    width: 330px;
+    padding: 3% 8%;
+    border:0.2px solid black;
+    border-radius:8px;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    transition: .3s;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    top:150%;
+    background-color:black;
+    left: -200px;
+    width:120%;
+    transform: rotate(50deg);
+    height: 18px;
+    filter: blur(30px);
+    opacity: 0,5;
+    transition: 1s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #ff3c00;
+}
+
+.card:hover::after {
+    width: 225%;
+    top:-100%;
+}
+
+.card0 {
+   background: #ee5a2d;
+}
+
+.card2 {
+    background:rgb(64,124,255);
+}
+
+.card3 {
+    background:yellow;
+}
+
+.card img {
+    margin-top: 20px;
+}
+
+.card h2 {
+    font-size: 25px;
+}
+
+@media screen and (max-width:1200px) {
+    .cards {
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width:900px) {
+    .cards {
+        grid-template-columns:repeat(1,1fr);
+    }
+}
+
+
+/* Блок с проектами */
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    min-height: 100vh;
+    background:#ff6a00;
+    margin-top: -10px;
+}
+
+.projects-wrapper img{
+    max-width: 420px;
+    border:3px solid white;
+    border-radius:10px;
+    float: left;
+    margin-right: 15px;
+}
+
+.projects-wrapper {
+    margin: 150px auto;
+    width: 70%;
+}
+
+.text-box {
+    color: white;
+    margin-bottom: 70px;
+}
+
+.text-box h2 {
+    font-size: 62px;
+    margin: 0;
+}
+
+.text-box p {
+    font-size: 30px;
+}
+
+.projects-wrapper h1 {
+    text-align: center;
+    color:white;
+    font-size: 140px;
+    margin-bottom: 180px; 
+}
+
+.flex {
+    margin-top: -50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    align-items:center;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.circle1,
+.circle2,
+.circle3 {
+    width: 400px;
+    height: 430px;
+    padding: 5%;
+    margin: 0 -15px;
+    position: relative;
+    z-index: 50;
+    mix-blend-mode: multiply;
+    font-size: 30px;
+}
+
+.circle1 {
+    background: #ee5a2d;
+    border-radius: 50% 50% 50% 70%/ 50% 50% 70% 60%;
+    animation: move forwards 7s ease-in-out infinite alternate-reverse;
+    transition: ease 1s;
+}
+
+.circle2 {
+    background:rgb(64,124,255);
+    border-radius: 80% 40% 50% 50%/ 50%;
+    animation: move forwards 7s ease-in-out infinite alternate-reverse;
+    transition:ease 1s;
+    margin-top: 660px;
+}
+
+.circle3 {
+    background:yellow;
+    border-radius: 40% 40% 50% 40%/ 30% 50% 50% 50%;
+    animation: move forwards 7s ease-in-out infinite alternate-reverse;
+    transition: ease 1s;
+}
+
+.circle1:hover {
+    transform: translate(-40px ,-20px);
+}
+
+.circle1:hover ~ .circle3 {
+    transform: translate(40px ,20px);
+}
+
+.circle2:hover ~ .circle3 {
+    transform: translate(40px ,0);
+}
+
+.circle2:hover {
+    margin-left: 50px;
+}
+
+.circle3:hover {
+    transform: translate(40px,-20px);
+}
+
+@keyframes move {
+    0% {
+        border-radius:41% 50% 60% 70%/ 50% 50% 70% 60%;
+    }
+
+    20% {
+        border-radius:55% 50% 60% 65%/54% 50% 70% 60%;
+    }
+
+    40% {
+        border-radius:50% 50% 50% 70%/50% 50% 70% 60%;
+    }
+    
+    60% {
+        border-radius:40% 40% 50% 40%/30% 50% 50% 50%;
+    }
+    80% {
+        border-radius:50% 50% 50% 70%/50% 50% 70% 60%;
+    }
+
+    100% {
+        border-radius:40% 40% 50% 40%/30% 48% 50% 50%;
+    }
+}
+
+.flex h2 {
+    margin-left:140px ;
+    font-size: 80px;
+}
+
+.wawe {
+    background:#ff6a00;
+    max-height: 452px; 
+}
+
+.map {
+    margin-top: 200px;
+    width:100%;
+    height: 100vh;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    background:linear-gradient(rgb(255, 255, 255),rgb(217, 94, 0));
+}
+.map h1 {
+    font-size: 80px;
+    color:black ;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 60px;
+}
+
+iframe {
+    width: 60%;
+    height: 400px;
+    /* filter: invert(100%); */
+}
+
+.fixed-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    font-size: 20px;
+    padding-right: 110px;
+}
+
+.fixed-button:hover {
+    background-color: #0056b3;
+}
+
+
+.button::before {
+    content: '';
+      border-radius: 1000px;
+      min-width: calc(300px + 12px);
+      min-height: calc(60px + 12px);
+      border: 6px solid #1144b1;
+      box-shadow: 0 0 60px rgba(94, 11, 202, 0.64);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all .3s ease-in-out 0s;
+    }
+    
+    .button:hover, .button:focus {
+      color: gold;
+      transform: translateY(-6px);
+    }
+    
+    button:hover::before, button:focus::before {
+      opacity: 1;
+    }
+    
+    button::after {
+      content: '';
+      width: 30px; height: 30px;
+      border-radius: 100%;
+      border: 6px solid #0e64d4;
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: ring 1.5s infinite;
+    }
+
+    button:hover::after, button:focus::after {
+        animation: none;
+        display: none;
+      }
+      
+      @keyframes ring {
+        0% {
+          width: 30px;
+          height: 30px;
+          opacity: 1;
+        }
+        100% {
+          width: 300px;
+          height: 300px;
+          opacity: 0;
+        }
+      }
+
+
+@media (max-width:1000px) {
+    .circle1,
+.circle2,
+.circle3 {
+    width: 350px;
+    height: 380px;
+    padding: 5%;
+    margin: 0 -15px;
+    position: relative;
+    z-index: 50;
+    mix-blend-mode: multiply;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.flex {
+    margin-top: -50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    align-items:center;
+    height: 90%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+}
+
+
+@media (max-width:1800px) {
+    .circle1,
+.circle2,
+.circle3 {
+    width: 350px;
+    height: 380px;
+    padding: 5%;
+    margin: 0 -15px;
+    position: relative;
+    z-index: 50;
+    mix-blend-mode: multiply;
+    font-size: 24px;
+    margin-top: 50px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    align-items:center;
+    height: 150vh;
+    font-family: 'Courier New', Courier, monospace;
+} 
+
+.circle1 {
+    background: #ee5a2d;
+    border-radius: 50% 50% 50% 70%/ 50% 50% 70% 60%;
+    animation: move forwards 7s ease-in-out infinite alternate-reverse;
+    transition: ease 1s;
+}
+
+.circle2 {
+    background:rgb(64,124,255);
+    border-radius: 80% 40% 50% 50%/ 50%;
+    animation: move forwards 7s ease-in-out infinite alternate-reverse;
+    transition:ease 1s;
+    margin-left: 100px;
+}
+
+.circle3 {
+    background:yellow;
+    border-radius: 40% 40% 50% 40%/ 30% 50% 50% 50%;
+    animation: move forwards 7s ease-in-out infinite alternate-reverse;
+    transition: ease 1s;
+    margin-left: 40px;
+}
+
+}
