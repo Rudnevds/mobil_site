@@ -464,3 +464,39 @@ iframe {
 }
 
 }
+
+
+@media (max-width:1300px) {
+    .block1 h1{
+        font-size: 35px;
+    }
+
+    .block1 p{
+        font-size: 25px;
+    }
+
+    .service h1 {
+        font-size: 50px;
+        margin-top: -150px;
+    }
+
+    .projects-wrapper h1 {
+        font-size: 70px;
+    }
+
+    .projects-wrapper img {
+        max-width: 270px;
+    }
+
+    .text-box h2 {
+        font-size: 30px;
+    }
+
+    .text-box p{
+        font-size: 20px;
+    }
+
+    .fixed-button {
+        opacity:0;
+    }
+}
