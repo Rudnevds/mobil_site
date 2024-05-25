@@ -626,6 +626,58 @@ iframe {
     background-color: #0056b3;
 }
 
+@media (max-width:1300px) {
+
+    .wrapper h2{
+        font-size: 70px;
+        text-align: center;
+    }
+
+    .container2 h1 {
+        font-size: 40px;
+    }
+
+    .vstavka p {
+         font-size: 18px;
+     }
+ 
+     .timeline{
+        width: 80vw;
+     }
+
+     .timeline .chekpoint{
+        width: 100%;
+        transform: none;
+        padding-left: 0;
+        padding-right: 0;
+        border: none;
+     }
+
+     .timeline .chekpoint::before{
+        width: 3px;
+        height: 4em;
+        top: -2em;
+        left: 50%;
+        transform: translateX(-50%);
+     }
+
+     .timeline .chekpoint div::before{
+        top: -0.5em;
+        left: 50%;
+        transform: translateX(-50%);
+     }
+
+     .wrap .button{
+        left: -40%;
+     }
+
+     .fixed-button {
+        opacity:0;
+    }
+
+
+ }
+
 
 
 
