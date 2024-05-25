@@ -466,3 +466,46 @@
     }
 }
 
+@media (max-width:1300px) {
+    .clouds h1{
+        font-size: 70px;
+        margin-top: -200px;
+    }
+
+    .block3 h1{
+        font-size: 70px;
+    }
+
+    
+    .block4 h1{
+        font-size: 70px;
+        margin-bottom: 150px;
+    }
+
+    .block3 {
+        height: 200vh;
+    }
+
+    .projects h1 {
+       padding-top: 0px;
+    }
+
+    .block4 {
+        height: 480vh;
+    }
+
+    .fixed-button {
+        opacity:0;
+    }
+}
+
+@media (min-width:480px) {
+    .block3{
+        height: 310vh;
+    }
+
+    .block4{
+        height: 480vh;
+    }
+} 
+
